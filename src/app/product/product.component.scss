@@ -1,0 +1,144 @@
+.products{
+    background-color: #FCFCFC;
+    background-image: url('/fund-cafe.png');
+    width: 75vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.products h2{
+    font-weight: 900;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.group-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-block: 30px;
+}
+
+.btn{
+    background-color: #fff;
+    padding-block: 10px;
+    padding-inline: 20px;
+    font-weight: 600;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: #d3a470; /* Cor do botão ativo */
+    color: white;
+  }
+  
+  // Seleciona todos os elementos com a classe btn que não possuem a classe active.
+  .btn:not(.active):hover {
+    background-color: #f5f5f5;
+  }
+  .grao{
+    position: absolute;
+    margin-left: 90%;
+    top: 0;
+  
+  }
+ 
+
+  .product-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 30px;
+    overflow-x: auto;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 370px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #c4c4c4;
+    padding: 30px;
+    flex: 0 0 auto;
+  }
+  .product-item::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.product-item::-webkit-scrollbar-thumb {
+    background-color: #d3a470;
+    border-radius: 10px;
+}
+
+  .card img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+
+  }
+
+  .card h4{
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .card p{
+    font-weight: 500;
+  }
+  .star {
+    font-size: 1rem; 
+    margin-top: 20px;
+  }
+  
+
+  .bt-cart{
+    background-color: #d3a470;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .bt-cart:hover{
+    background-color: #9b7850;
+  }
+
+  @media (max-width: 800px) {
+    .grao{
+      display: none;
+    }
+    .group-btn{
+      flex-wrap: wrap;
+    }
+    .products{
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      padding-top: 70px;
+    }
+    .product-item{
+      width: 300px;
+    }
+  }

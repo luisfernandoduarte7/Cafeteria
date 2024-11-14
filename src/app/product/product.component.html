@@ -1,0 +1,34 @@
+ <section>
+        <img src="./graoCafe.png" alt="" class="grao">
+        <div class="products">
+            <h2>WE LOVE TREND</h2>
+            <img src="./acabamento.png" alt="acabamento xícara">
+
+            <div class="group-btn">
+                <div class="btn active"
+                    [ngClass]="{'active': selectedButton === 'featured'}"
+                    (click)="loadProducts('featured')">
+                    ALL
+                </div>
+                <div class="btn"
+                [ngClass]="{'active': selectedButton === 'letest product'}"
+                   (click)="loadProducts('latest product')">LATEST PRODUCTS</div>
+                <div class="btn"
+                [ngClass]="{'active': selectedButton === 'best seller'}"
+                   (click)="loadProducts('best seller')">
+                   BEST SELLER
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="card" *ngFor="let product of filteredProducts">
+                    <img [src]="product.imageUrl" alt="{{product.name}}">
+                    <span class="star"[appStarRating]="product.rating"></span>
+                    <h4>{{ product.name}}</h4>
+                    <!--para colocar real BRL colocar em dolar USD e para euro EUR---->
+                    <p>{{product.price | currency: 'BRL' }}</p>
+                    <span class="bt-cart">Add to Bag</span>
+                </div>
+            </div>
+        </div>
+     </section> 
